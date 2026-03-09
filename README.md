@@ -1,168 +1,238 @@
-
-
-</div>
-
-<footer>
-<p>© 2026 Italian Homemade Recipe Book</p>
-<p>Written by Nataly Ospina</p>
-</footer>
-
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Italian Homemade Recipe Book | Nataly Ospina</title>
+
 <style>
-body{font-family:Arial, sans-serif;margin:0;background:#f6f6f6;color:#333}
-header{background:#b22222;color:white;padding:25px;text-align:center}
-header h1{margin:0}
-nav{background:#ffffff;padding:12px;text-align:center;border-bottom:1px solid #ddd}
-nav a{margin:0 15px;text-decoration:none;color:#b22222;font-weight:bold}
-.container{max-width:1000px;margin:auto;padding:25px}
-.recipe{background:white;margin-bottom:30px;padding:20px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.1)}
-.recipe img{width:100%;border-radius:10px;margin-top:10px}
-h2{color:#b22222}
-h3{margin-top:15px}
-ul,ol{line-height:1.6}
-footer{background:#222;color:white;text-align:center;padding:25px;margin-top:40px}
+body{
+margin:0;
+font-family:Georgia, serif;
+background:#efeae2;
+color:#333;
+}
+
+/* COVER */
+.cover{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1498579150354-977475b7ea0b') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.cover h1{font-size:60px;margin-bottom:10px;letter-spacing:2px}
+.cover p{font-size:22px;margin-bottom:25px}
+
+.open-book{
+background:#b22222;
+color:white;
+padding:16px 40px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+}
+
+.open-book:hover{background:#8b0000}
+
+/* BOOK LAYOUT */
+.book{
+max-width:900px;
+margin:auto;
+padding:50px 20px;
+}
+
+.chapter{
+background:white;
+padding:40px;
+margin-bottom:50px;
+border-radius:12px;
+box-shadow:0 12px 30px rgba(0,0,0,0.1);
+}
+
+.chapter img{
+width:100%;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+.chapter-title{
+font-size:28px;
+color:#b22222;
+margin-bottom:10px;
+}
+
+ul,ol{line-height:1.9}
+
+/* PREMIUM LOCK */
+.premium{
+background:#fff3cd;
+padding:40px;
+border-radius:12px;
+text-align:center;
+font-size:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-btn{
+background:#b22222;
+color:white;
+padding:16px 32px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+margin-top:20px;
+}
+
+.contact-btn:hover{background:#8b0000}
+
+/* AUTHOR SECTION */
+.author{
+background:white;
+padding:40px;
+border-radius:12px;
+margin-top:50px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.author h2{color:#b22222}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:35px;
+margin-top:60px;
+}
 </style>
 </head>
+
 <body>
 
-<header>
+<!-- BOOK COVER -->
+<section class="cover">
 <h1>Italian Homemade Recipe Book</h1>
-<p>Learn to cook authentic Italian meals at home</p>
-<p><strong>Author: Nataly Ospina</strong></p>
-</header>
+<p>Authentic Italian Cooking</p>
+<p>By Chef Nataly Ospina</p>
+<a class="open-book" href="#book">Open The Book</a>
+</section>
 
-<nav>
-<a href="#pasta">Pasta</a>
-<a href="#pizza">Pizza</a>
-<a href="#meals">Main Meals</a>
-<a href="#desserts">Desserts</a>
-</nav>
+<!-- BOOK -->
+<div class="book" id="book">
 
-<div class="container">
+<div class="chapter">
+<div class="chapter-title">Chapter 1 — Spaghetti Carbonara</div>
+<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b">
 
-<div class="recipe" id="pasta">
-<h2>Spaghetti Carbonara</h2>
-<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b" alt="Spaghetti Carbonara">
 <h3>Ingredients</h3>
 <ul>
 <li>200g spaghetti</li>
 <li>2 eggs</li>
-<li>100g pancetta or bacon</li>
-<li>1/2 cup grated parmesan cheese</li>
-<li>2 cloves garlic</li>
-<li>Salt and black pepper</li>
+<li>100g pancetta</li>
+<li>Parmesan cheese</li>
+<li>Black pepper</li>
 </ul>
+
 <h3>Instructions</h3>
 <ol>
-<li>Boil salted water and cook spaghetti until tender.</li>
-<li>Fry pancetta and garlic in a pan until crispy.</li>
-<li>Beat eggs and mix with parmesan cheese.</li>
+<li>Cook spaghetti in salted boiling water.</li>
+<li>Fry pancetta until crispy.</li>
+<li>Mix eggs with grated parmesan.</li>
 <li>Drain pasta and mix with pancetta.</li>
-<li>Remove from heat and stir in egg mixture quickly.</li>
-<li>Add pepper and serve immediately.</li>
+<li>Remove from heat and stir egg mixture quickly.</li>
+<li>Serve with extra cheese and pepper.</li>
 </ol>
 </div>
 
-<div class="recipe">
-<h2>Fettuccine Alfredo</h2>
-<img src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a" alt="Fettuccine Alfredo">
-<h3>Ingredients</h3>
-<ul>
-<li>250g fettuccine pasta</li>
-<li>1 cup heavy cream</li>
-<li>1/2 cup butter</li>
-<li>1 cup parmesan cheese</li>
-<li>Salt and pepper</li>
-</ul>
-<h3>Instructions</h3>
-<ol>
-<li>Cook fettuccine in boiling salted water.</li>
-<li>Melt butter in a pan and add cream.</li>
-<li>Stir in parmesan cheese until smooth.</li>
-<li>Add cooked pasta and mix well.</li>
-<li>Season with salt and pepper then serve.</li>
-</ol>
-</div>
+<div class="chapter">
+<div class="chapter-title">Chapter 2 — Traditional Lasagna</div>
+<img src="https://images.unsplash.com/photo-1619895092538-128341789043">
 
-<div class="recipe">
-<h2>Lasagna</h2>
-<img src="https://images.unsplash.com/photo-1619895092538-128341789043" alt="Lasagna">
 <h3>Ingredients</h3>
 <ul>
 <li>Lasagna sheets</li>
 <li>500g ground beef</li>
-<li>2 cups tomato sauce</li>
-<li>1 cup ricotta cheese</li>
-<li>1 cup mozzarella cheese</li>
-<li>1/2 cup parmesan cheese</li>
+<li>Tomato sauce</li>
+<li>Ricotta cheese</li>
+<li>Mozzarella cheese</li>
 </ul>
+
 <h3>Instructions</h3>
 <ol>
-<li>Cook ground beef in a pan and add tomato sauce.</li>
-<li>Layer lasagna sheets with meat sauce and cheeses.</li>
-<li>Repeat layers in a baking dish.</li>
-<li>Bake at 180°C (350°F) for 35–40 minutes.</li>
-<li>Let it rest for 10 minutes before serving.</li>
+<li>Cook beef with tomato sauce.</li>
+<li>Layer pasta sheets with meat and cheese.</li>
+<li>Repeat layers inside baking dish.</li>
+<li>Bake at 180°C for 40 minutes.</li>
+<li>Let rest before serving.</li>
 </ol>
 </div>
 
-<div class="recipe" id="pizza">
-<h2>Margherita Pizza</h2>
-<img src="https://images.unsplash.com/photo-1601924928376-0a3b0c3d8f3a" alt="Margherita Pizza">
+<div class="chapter">
+<div class="chapter-title">Chapter 3 — Margherita Pizza</div>
+<img src="https://images.unsplash.com/photo-1601924928376-0a3b0c3d8f3a">
+
 <h3>Ingredients</h3>
 <ul>
 <li>Pizza dough</li>
-<li>1/2 cup tomato sauce</li>
-<li>200g mozzarella cheese</li>
+<li>Tomato sauce</li>
+<li>Mozzarella cheese</li>
 <li>Fresh basil</li>
 <li>Olive oil</li>
 </ul>
+
 <h3>Instructions</h3>
 <ol>
-<li>Preheat oven to 220°C (425°F).</li>
-<li>Roll pizza dough onto a tray.</li>
+<li>Preheat oven to 220°C.</li>
+<li>Roll dough onto pizza tray.</li>
 <li>Spread tomato sauce evenly.</li>
-<li>Add mozzarella cheese.</li>
+<li>Add mozzarella slices.</li>
 <li>Bake for 12–15 minutes.</li>
-<li>Top with basil and olive oil.</li>
+<li>Add basil and drizzle olive oil.</li>
 </ol>
 </div>
 
-<div class="recipe" id="desserts">
-<h2>Tiramisu</h2>
-<img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9" alt="Tiramisu">
-<h3>Ingredients</h3>
-<ul>
-<li>1 cup strong coffee</li>
-<li>200g mascarpone cheese</li>
-<li>2 eggs</li>
-<li>1/2 cup sugar</li>
-<li>Ladyfinger biscuits</li>
-<li>Cocoa powder</li>
-</ul>
-<h3>Instructions</h3>
-<ol>
-<li>Beat egg yolks with sugar until creamy.</li>
-<li>Mix mascarpone cheese into the cream.</li>
-<li>Dip ladyfingers quickly into coffee.</li>
-<li>Layer biscuits and cream in a dish.</li>
-<li>Repeat layers and refrigerate for 4 hours.</li>
-<li>Dust cocoa powder on top before serving.</li>
-</ol>
+<!-- LOCKED PREMIUM CONTENT -->
+<div class="premium">
+<h2>Premium Cookbook Locked</h2>
+<p>
+The full Italian recipe collection contains over 80 authentic meals and desserts.
+</p>
+
+<p>
+To unlock the full cookbook please contact our management team to purchase access.
+</p>
+
+<p><strong>Manager Email:</strong></p>
+<p>manager@example.com</p>
+
+<a class="contact-btn" href="mailto:manager@example.com?subject=Italian Recipe Book Purchase">
+Contact Manager To Purchase
+</a>
+</div>
+
+<!-- AUTHOR -->
+<div class="author">
+<h2>About The Author</h2>
+<p>
+Nataly Ospina is passionate about authentic Italian cooking and traditional homemade recipes. This cookbook was created to share timeless Italian meals with people around the world.
+</p>
 </div>
 
 </div>
 
 <footer>
-<p>© 2026 Italian Homemade Recipe Book</p>
-<p>Written by Nataly Ospina</p>
+<p>Italian Homemade Recipe Book</p>
+<p>Author: Nataly Ospina</p>
+<p>All Rights Reserved</p>
 </footer>
 
 </body>
