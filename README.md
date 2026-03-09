@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Italian Homemade Recipe Book | Nataly Ospina</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Italian Homemade Recipe Book</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
+
 body{
 margin:0;
-font-family:Georgia, serif;
-background:#efeae2;
-color:#333;
+font-family:'Lora',serif;
+background:#111;
+color:#222;
 }
 
-/* COVER */
 .cover{
 height:100vh;
-background:url('https://images.unsplash.com/photo-1498579150354-977475b7ea0b') center/cover no-repeat;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1546549032-9571cd6b27df');
+background-size:cover;
+background-position:center;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -26,214 +30,278 @@ color:white;
 padding:20px;
 }
 
-.cover h1{font-size:60px;margin-bottom:10px;letter-spacing:2px}
-.cover p{font-size:22px;margin-bottom:25px}
+.cover h1{
+font-family:'Playfair Display',serif;
+font-size:60px;
+letter-spacing:2px;
+margin:0;
+}
 
-.open-book{
-background:#b22222;
-color:white;
-padding:16px 40px;
-border-radius:40px;
-text-decoration:none;
-font-weight:bold;
+.cover p{
+font-size:20px;
+margin-top:10px;
+}
+
+.open-book-btn{
+margin-top:40px;
+padding:14px 32px;
 font-size:18px;
-box-shadow:0 8px 25px rgba(0,0,0,0.4);
+border:none;
+background:#d4af37;
+color:black;
+cursor:pointer;
+border-radius:4px;
+font-weight:bold;
 }
 
-.open-book:hover{background:#8b0000}
+.open-book-btn:hover{
+opacity:0.9;
+}
 
-/* BOOK LAYOUT */
 .book{
-max-width:900px;
+display:none;
+background:#f5f3ef;
+padding:60px 20px;
+}
+
+.container{
+max-width:850px;
 margin:auto;
-padding:50px 20px;
-}
-
-.chapter{
 background:white;
-padding:40px;
-margin-bottom:50px;
-border-radius:12px;
-box-shadow:0 12px 30px rgba(0,0,0,0.1);
+padding:50px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+margin-bottom:40px;
+border-radius:6px;
 }
 
-.chapter img{
-width:100%;
-border-radius:12px;
-margin-bottom:20px;
+h2{
+font-family:'Playfair Display',serif;
+font-size:36px;
+margin-top:0;
 }
 
 .chapter-title{
-font-size:28px;
-color:#b22222;
+font-size:14px;
+letter-spacing:3px;
+text-transform:uppercase;
+color:#888;
 margin-bottom:10px;
 }
 
-ul,ol{line-height:1.9}
-
-/* PREMIUM LOCK */
-.premium{
-background:#fff3cd;
-padding:40px;
-border-radius:12px;
-text-align:center;
-font-size:18px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+.ingredients ul{
+padding-left:20px;
 }
 
-.contact-btn{
-background:#b22222;
+.ingredients li{
+margin-bottom:6px;
+}
+
+.lock-section{
+text-align:center;
+padding:80px 20px;
+background:#1c1c1c;
 color:white;
-padding:16px 32px;
-border-radius:40px;
-text-decoration:none;
-font-weight:bold;
-display:inline-block;
-margin-top:20px;
 }
 
-.contact-btn:hover{background:#8b0000}
+.lock-section h2{
+color:white;
+}
 
-/* AUTHOR SECTION */
-.author{
+.purchase-box{
 background:white;
+color:black;
 padding:40px;
-border-radius:12px;
-margin-top:50px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-text-align:center;
+max-width:600px;
+margin:40px auto;
+border-radius:8px;
 }
 
-.author h2{color:#b22222}
+.purchase-btn{
+margin-top:20px;
+padding:14px 28px;
+font-size:18px;
+border:none;
+background:#d4af37;
+cursor:pointer;
+border-radius:4px;
+font-weight:bold;
+}
+
+.purchase-btn:hover{
+opacity:0.9;
+}
+
+.toc{
+margin-bottom:30px;
+}
+
+.toc li{
+margin-bottom:6px;
+}
+
+.author{
+text-align:center;
+padding:60px 20px;
+background:#fafafa;
+}
+
+.author h2{
+margin-bottom:10px;
+}
 
 footer{
-background:#111;
-color:white;
 text-align:center;
-padding:35px;
-margin-top:60px;
+padding:30px;
+font-size:14px;
+background:#111;
+color:#aaa;
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- BOOK COVER -->
-<section class="cover">
+<div class="cover">
 <h1>Italian Homemade Recipe Book</h1>
-<p>Authentic Italian Cooking</p>
-<p>By Chef Nataly Ospina</p>
-<a class="open-book" href="#book">Open The Book</a>
-</section>
+<p>Authentic Italian Cuisine</p>
+<p>Written by Chef Nataly Ospina</p>
 
-<!-- BOOK -->
+<button class="open-book-btn" onclick="openBook()">Open The Book</button>
+</div>
+
 <div class="book" id="book">
 
-<div class="chapter">
-<div class="chapter-title">Chapter 1 — Spaghetti Carbonara</div>
-<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b">
+<div class="container">
+<h2>Table of Contents</h2>
+<ul class="toc">
+<li>Chapter I — Spaghetti Carbonara</li>
+<li>Chapter II — Classic Margherita Pizza</li>
+<li>Chapter III — Creamy Mushroom Risotto</li>
+<li>Chapter IV — Premium Recipes (Locked)</li>
+</ul>
+</div>
 
+<div class="container">
+<div class="chapter-title">Chapter I</div>
+<h2>Spaghetti Carbonara</h2>
+
+<div class="ingredients">
 <h3>Ingredients</h3>
 <ul>
 <li>200g spaghetti</li>
-<li>2 eggs</li>
 <li>100g pancetta</li>
+<li>2 eggs</li>
 <li>Parmesan cheese</li>
 <li>Black pepper</li>
 </ul>
-
-<h3>Instructions</h3>
-<ol>
-<li>Cook spaghetti in salted boiling water.</li>
-<li>Fry pancetta until crispy.</li>
-<li>Mix eggs with grated parmesan.</li>
-<li>Drain pasta and mix with pancetta.</li>
-<li>Remove from heat and stir egg mixture quickly.</li>
-<li>Serve with extra cheese and pepper.</li>
-</ol>
 </div>
 
-<div class="chapter">
-<div class="chapter-title">Chapter 2 — Traditional Lasagna</div>
-<img src="https://images.unsplash.com/photo-1619895092538-128341789043">
-
-<h3>Ingredients</h3>
-<ul>
-<li>Lasagna sheets</li>
-<li>500g ground beef</li>
-<li>Tomato sauce</li>
-<li>Ricotta cheese</li>
-<li>Mozzarella cheese</li>
-</ul>
-
-<h3>Instructions</h3>
-<ol>
-<li>Cook beef with tomato sauce.</li>
-<li>Layer pasta sheets with meat and cheese.</li>
-<li>Repeat layers inside baking dish.</li>
-<li>Bake at 180°C for 40 minutes.</li>
-<li>Let rest before serving.</li>
-</ol>
+<h3>Preparation</h3>
+<p>
+Cook the spaghetti in salted water until al dente. In a pan, cook pancetta until crisp.
+Beat eggs with grated parmesan and pepper. Drain pasta and mix quickly with pancetta
+and egg mixture to create a creamy sauce.
+</p>
 </div>
 
-<div class="chapter">
-<div class="chapter-title">Chapter 3 — Margherita Pizza</div>
-<img src="https://images.unsplash.com/photo-1601924928376-0a3b0c3d8f3a">
+<div class="container">
+<div class="chapter-title">Chapter II</div>
+<h2>Classic Margherita Pizza</h2>
 
+<div class="ingredients">
 <h3>Ingredients</h3>
 <ul>
 <li>Pizza dough</li>
 <li>Tomato sauce</li>
-<li>Mozzarella cheese</li>
+<li>Fresh mozzarella</li>
 <li>Fresh basil</li>
 <li>Olive oil</li>
 </ul>
-
-<h3>Instructions</h3>
-<ol>
-<li>Preheat oven to 220°C.</li>
-<li>Roll dough onto pizza tray.</li>
-<li>Spread tomato sauce evenly.</li>
-<li>Add mozzarella slices.</li>
-<li>Bake for 12–15 minutes.</li>
-<li>Add basil and drizzle olive oil.</li>
-</ol>
 </div>
 
-<!-- LOCKED PREMIUM CONTENT -->
-<div class="premium">
-<h2>Premium Cookbook Locked</h2>
+<h3>Preparation</h3>
 <p>
-The full Italian recipe collection contains over 80 authentic meals and desserts.
+Roll the dough thin. Spread tomato sauce, add mozzarella slices, drizzle olive oil,
+and bake in a very hot oven until crust is golden. Finish with fresh basil.
 </p>
-
-<p>
-To unlock the full cookbook please contact our management team to purchase access.
-</p>
-
-<p><strong>Manager Email:</strong></p>
-<p>manager@example.com</p>
-
-<a class="contact-btn" href="mailto:manager@example.com?subject=Italian Recipe Book Purchase">
-Contact Manager To Purchase
-</a>
 </div>
 
-<!-- AUTHOR -->
+<div class="container">
+<div class="chapter-title">Chapter III</div>
+<h2>Creamy Mushroom Risotto</h2>
+
+<div class="ingredients">
+<h3>Ingredients</h3>
+<ul>
+<li>Arborio rice</li>
+<li>Mushrooms</li>
+<li>Onion</li>
+<li>White wine</li>
+<li>Parmesan cheese</li>
+</ul>
+</div>
+
+<h3>Preparation</h3>
+<p>
+Cook onions in butter, add mushrooms and rice. Deglaze with white wine.
+Slowly add broth while stirring until rice becomes creamy. Finish with parmesan.
+</p>
+</div>
+
+<div class="lock-section">
+<h2>Premium Cookbook Recipes</h2>
+<p>
+The full cookbook contains over <b>80 authentic Italian recipes</b> including
+premium pasta dishes, desserts, chef secrets, and traditional family recipes.
+</p>
+
+<div class="purchase-box">
+<h3>Unlock the Full Book</h3>
+<p>
+To access the complete cookbook, contact the management team to purchase the
+full digital edition.
+</p>
+
+<p><b>Management Email</b><br>
+jenselter0009@gmail.com</p>
+
+<button class="purchase-btn" onclick="contactManager()">
+Contact Management To Purchase
+</button>
+</div>
+</div>
+
 <div class="author">
 <h2>About The Author</h2>
 <p>
-Nataly Ospina is passionate about authentic Italian cooking and traditional homemade recipes. This cookbook was created to share timeless Italian meals with people around the world.
+Chef Nataly Ospina shares authentic Italian recipes inspired by traditional
+family kitchens and modern gourmet techniques. This cookbook is designed
+for food lovers who appreciate elegant, homemade cuisine.
 </p>
 </div>
 
 </div>
 
 <footer>
-<p>Italian Homemade Recipe Book</p>
-<p>Author: Nataly Ospina</p>
-<p>All Rights Reserved</p>
+© 2026 Italian Homemade Recipe Book
 </footer>
+
+<script>
+
+function openBook(){
+
+document.querySelector('.cover').style.display='none';
+document.getElementById('book').style.display='block';
+
+window.scrollTo(0,0);
+}
+
+function contactManager(){
+window.location.href="mailto:jenselter0009@gmail.com?subject=Cookbook Purchase Request";
+}
+
+</script>
 
 </body>
 </html>
